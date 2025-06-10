@@ -15,7 +15,7 @@ export const ChatProvider = ({ children }) => {
     const [loadingMessages, setLoadingMessages] = useState(false);
 
     const API = axios.create({
-        baseURL: "http://localhost:4000/api",
+        baseURL: "https://regalia-estates.onrender.com/api",
         withCredentials: true,
     });
 
