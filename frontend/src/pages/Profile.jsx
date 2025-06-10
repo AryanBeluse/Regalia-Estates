@@ -282,16 +282,7 @@ const Profile = () => {
                             <span>Your Chats</span>
                         </div>
 
-                        {currentUser.isBroker &&
-                            <div className={`flex items-center gap-3 py-3.5 px-4 md:px-6 w-full md:w-72 border border-gray-300 rounded-md hover:bg-gray-100 cursor-pointer  
-                            ${activeTab === "dash" ? "bg-gray-100" : ""}`}
-                                onClick={() => {
-                                    setActiveTab("dash");
-                                    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-                                }} >
-                                <img className="w-6 h-6" src={assets.yourListingIcon} alt="Your Listings" />
-                                <span>Your</span>
-                            </div>}
+                        
 
                         {currentUser.isBroker &&
                             <div className={`flex items-center gap-3 py-3.5 px-4 md:px-6 w-full md:w-72 border border-gray-300 rounded-md hover:bg-gray-100 cursor-pointer  
@@ -336,7 +327,7 @@ const Profile = () => {
                     {activeTab === "Chats" && <ChatList />}
                     {activeTab === "Listings" && < UserListing />}
                     {activeTab === "Create Listing" && < CreateListing />}
-                    {activeTab === "dash" && < Dashboard />}
+                    
                 </div>
 
             </div>
